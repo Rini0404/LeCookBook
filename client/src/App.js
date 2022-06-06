@@ -42,6 +42,11 @@ function App() {
     <ApolloProvider client={client}>
       <Router>
         <div>
+      
+      
+
+
+
           <StoreProvider>
             <Nav />
             <Routes>
