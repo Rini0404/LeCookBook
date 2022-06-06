@@ -17,6 +17,7 @@ import Nav from './components/Nav';
 import { StoreProvider } from './utils/GlobalState';
 import Success from './pages/Success';
 import OrderHistory from './pages/OrderHistory';
+import Form from './components/FoodFrom/index'
 
 const httpLink = createHttpLink({
   uri: '/graphql',
@@ -42,11 +43,6 @@ function App() {
     <ApolloProvider client={client}>
       <Router>
         <div>
-      
-      
-
-
-
           <StoreProvider>
             <Nav />
             <Routes>
@@ -73,6 +69,10 @@ function App() {
               <Route 
                 path="/products/:id" 
                 element={<Detail />} 
+              />
+              <Route 
+                path="/Form" 
+                element={<Form />} 
               />
               <Route 
                 path="*" 
