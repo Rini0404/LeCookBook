@@ -1,19 +1,19 @@
 import React, { useState } from 'react';
-import Button from 'react-bootstrap/Button';
+// import button from 'react-bootstrap/button';
 
 function RandomRecipe(props) {
     return (
         <div className='container'>
-            <Button>
-                Button1
-            </Button>
+            <button>
+                button1
+            </button>
             <div>
                 Container For Recipe Card
                 
             </div>
-            <Button>
-                Button2
-            </Button>
+            <button>
+                button2
+            </button>
         </div>
 
 
