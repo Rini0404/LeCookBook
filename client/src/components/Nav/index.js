@@ -17,6 +17,12 @@ function Nav() {
               Logout
             </a>
           </li>
+          <li>
+            <a href="/CookBook" onClick={() => Auth.cookBook}>
+              My Cook Book
+            </a>
+          </li>
+
         </ul>
       );
     } else {
