@@ -1,4 +1,5 @@
 import React from 'react';
+// import 'bootstrap/dist/css/bootstrap.min.css';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import {
   ApolloClient,
@@ -16,7 +17,7 @@ import Signup from './pages/Signup';
 import Nav from './components/Nav';
 import { StoreProvider } from './utils/GlobalState';
 import Success from './pages/Success';
-import OrderHistory from './pages/OrderHistory';
+import RandomRecipe from './pages/RandomRecipe';
 import Form from './components/FoodFrom/index';
 import Results from './pages/results';
 import Footer from './components/Footer/Footer'
@@ -64,15 +65,12 @@ function App() {
                 path="/success" 
                 element={<Success />} 
               />
-              <Route 
-                path="/orderHistory" 
-                element={<OrderHistory />} 
-              />
+              
               <Route 
                 path="/products/:id" 
                 element={<Detail />} 
               />
-              <Route 
+                            <Route 
                 path="/Form" 
                 element={<Form />} 
               />
@@ -84,7 +82,14 @@ function App() {
                 path="*" 
                 element={<NoMatch />} 
               />
-
+              <Route 
+                path="/random" 
+                element={<RandomRecipe />} 
+              />
+              <Route 
+                path="*" 
+                element={<NoMatch />} 
+              />
             </Routes>
           </StoreProvider>
           <Footer />
