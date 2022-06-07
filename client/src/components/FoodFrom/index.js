@@ -5,10 +5,13 @@ import { Link } from "react-router-dom";
 
 function index() {
   // useEffect(() => {
-
+  
   // })
  
   function showDropDownMenu(el) {
+    el.target.parentElement.children[1].classList.toggle("hidden");
+  }  
+  function showDropDownMenuOne(el) {
     el.target.parentElement.children[1].classList.toggle("hidden");
   }
   function swaptext(el) {
@@ -18,9 +21,25 @@ function index() {
     document.getElementById("drop-down-div").classList.toggle("hidden");
 
   }
-  function showDropDownMenuOne(el) {
+  function swaptext2(el) {
+    const targetText = el.target.innerText;
+    document.getElementById("drop-down-content-setter2").innerText =
+      targetText;
+    document.getElementById("drop-down-div2").classList.toggle("hidden");
+
+  }
+
+  function showDropDownMenuTwo(el) {
     el.target.parentElement.children[1].classList.toggle("hidden");
   }
+  function swaptext3(el) {
+    const targetText = el.target.innerText;
+    document.getElementById("drop-down-content-setter3").innerText =
+      targetText;
+    document.getElementById("drop-down-div3").classList.toggle("hidden");
+
+  }
+
   function swaptextone(el) {
     const targetText = el.target.innerText;
     document.getElementById("drop-down-content-setter-one").innerText =
@@ -130,60 +149,64 @@ function index() {
                   </div>
                   {/* end */}
 
+
+
+
+
           {/* Start of type dish */}
             <div className="py-4">
                   <p className="text-base font-medium leading-none text-gray-800">Type of Dish</p>
                 <div className="relative w-full mt-2 border border-gray-300 rounded outline-none dropdown-one">
                     <button onClick={showDropDownMenu} className="relative flex items-center justify-between w-full px-5 py-4 dropbtn-one">
-                      <span className="pr-4 text-sm font-medium text-gray-600" id="drop-down-content-setter">
+                      <span className="pr-4 text-sm font-medium text-gray-600" id="drop-down-content-setter2">
                       Please select your cusine choice..
                       </span>
                       <svg id="rotate" className="absolute z-10 cursor-pointer right-5" width={10} height={6} viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M0.5 0.75L5 5.25L9.5 0.75" stroke="#4B5563" strokeLinecap="round" strokeLinejoin="round" />
                       </svg>
                     </button>
-                    <div className="absolute z-20 right-0 hidden w-full px-1 py-2 bg-white border-t border-gray-200 rounded shadow top-12" id="drop-down-div">
-                      <a href="javascript:void(0)" className="hover"><p className="p-3 text-sm leading-none text-gray-600 cursor-pointer hover:bg-indigo-100 hover:font-medium hover:text-indigo-700 hover:rounded" onClick={swaptext}>
+                    <div className="absolute z-20 right-0 hidden w-full px-1 py-2 bg-white border-t border-gray-200 rounded shadow top-12" id="drop-down-div2">
+                      <a href="javascript:void(0)" className="hover"><p className="p-3 text-sm leading-none text-gray-600 cursor-pointer hover:bg-indigo-100 hover:font-medium hover:text-indigo-700 hover:rounded" onClick={swaptext2}>
                             Gluten Free
                           
                         </p></a>
-                      <a href="javascript:void(0)"><p className="p-3 text-sm leading-none text-gray-600 cursor-pointer hover:bg-indigo-100 hover:font-medium hover:text-indigo-700 hover:rounded" onClick={swaptext}>
+                      <a href="javascript:void(0)"><p className="p-3 text-sm leading-none text-gray-600 cursor-pointer hover:bg-indigo-100 hover:font-medium hover:text-indigo-700 hover:rounded" onClick={swaptext2}>
                             Ketogenic
                           
                         </p></a>
-                      <a href="javascript:void(0)"><p className="p-3 text-sm leading-none text-gray-600 cursor-pointer hover:bg-indigo-100 hover:font-medium hover:text-indigo-700 hover:rounded" onClick={swaptext}>
+                      <a href="javascript:void(0)"><p className="p-3 text-sm leading-none text-gray-600 cursor-pointer hover:bg-indigo-100 hover:font-medium hover:text-indigo-700 hover:rounded" onClick={swaptext2}>
                             Vegetarian
                           
                         </p></a>
-                      <a href="javascript:void(0)"><p className="p-3 text-sm leading-none text-gray-600 cursor-pointer hover:bg-indigo-100 hover:font-medium hover:text-indigo-700 hover:rounded" onClick={swaptext}>
+                      <a href="javascript:void(0)"><p className="p-3 text-sm leading-none text-gray-600 cursor-pointer hover:bg-indigo-100 hover:font-medium hover:text-indigo-700 hover:rounded" onClick={swaptext2}>
                             Lacto-Vegetarian (no egg)
                           
                         </p></a>
-                      <a href="javascript:void(0)"><p className="p-3 text-sm leading-none text-gray-600 cursor-pointer hover:bg-indigo-100 hover:font-medium hover:text-indigo-700 hover:rounded" onClick={swaptext}>
+                      <a href="javascript:void(0)"><p className="p-3 text-sm leading-none text-gray-600 cursor-pointer hover:bg-indigo-100 hover:font-medium hover:text-indigo-700 hover:rounded" onClick={swaptext2}>
                             Ovo-Vegetarian (no dairy)
                           
                         </p></a>
-                      <a href="javascript:void(0)"><p className="p-3 text-sm leading-none text-gray-600 cursor-pointer hover:bg-indigo-100 hover:font-medium hover:text-indigo-700 hover:rounded" onClick={swaptext}>
+                      <a href="javascript:void(0)"><p className="p-3 text-sm leading-none text-gray-600 cursor-pointer hover:bg-indigo-100 hover:font-medium hover:text-indigo-700 hover:rounded" onClick={swaptext2}>
                             Vegan
                           
                         </p></a>
-                      <a href="javascript:void(0)"><p className="p-3 text-sm leading-none text-gray-600 cursor-pointer hover:bg-indigo-100 hover:font-medium hover:text-indigo-700 hover:rounded" onClick={swaptext}>
+                      <a href="javascript:void(0)"><p className="p-3 text-sm leading-none text-gray-600 cursor-pointer hover:bg-indigo-100 hover:font-medium hover:text-indigo-700 hover:rounded" onClick={swaptext2}>
                             Pescatarian
                           
                         </p></a>
-                      <a href="javascript:void(0)"><p className="p-3 text-sm leading-none text-gray-600 cursor-pointer hover:bg-indigo-100 hover:font-medium hover:text-indigo-700 hover:rounded" onClick={swaptext}>
+                      <a href="javascript:void(0)"><p className="p-3 text-sm leading-none text-gray-600 cursor-pointer hover:bg-indigo-100 hover:font-medium hover:text-indigo-700 hover:rounded" onClick={swaptext2}>
                             Paleo
                           
                         </p></a>
-                      <a href="javascript:void(0)"><p className="p-3 text-sm leading-none text-gray-600 cursor-pointer hover:bg-indigo-100 hover:font-medium hover:text-indigo-700 hover:rounded" onClick={swaptext}>
+                      <a href="javascript:void(0)"><p className="p-3 text-sm leading-none text-gray-600 cursor-pointer hover:bg-indigo-100 hover:font-medium hover:text-indigo-700 hover:rounded" onClick={swaptext2}>
                             Primal
                           
                         </p></a>
-                      <a href="javascript:void(0)"><p className="p-3 text-sm leading-none text-gray-600 cursor-pointer hover:bg-indigo-100 hover:font-medium hover:text-indigo-700 hover:rounded" onClick={swaptext}>
+                      <a href="javascript:void(0)"><p className="p-3 text-sm leading-none text-gray-600 cursor-pointer hover:bg-indigo-100 hover:font-medium hover:text-indigo-700 hover:rounded" onClick={swaptext2}>
                             Low FODMAP (high in legumes, wheat, and dairy)
                           
                         </p></a>
-                      <a href="javascript:void(0)"><p className="p-3 text-sm leading-none text-gray-600 cursor-pointer hover:bg-indigo-100 hover:font-medium hover:text-indigo-700 hover:rounded" onClick={swaptext}>
+                      <a href="javascript:void(0)"><p className="p-3 text-sm leading-none text-gray-600 cursor-pointer hover:bg-indigo-100 hover:font-medium hover:text-indigo-700 hover:rounded" onClick={swaptext2}>
                             Whole30
                           
                         </p></a>
@@ -259,45 +282,45 @@ function index() {
                 {/*-Dropdown*/}
                 <div className="relative top-1 ">
                   <div className="relative w-full mt-2 border border-gray-300 rounded outline-none dropdown-one">
-                    <button onClick={showDropDownMenu} className="relative flex items-center justify-between w-full px-5 py-4 dropbtn-one">
-                      <span className="pr-4 text-sm font-medium text-gray-600" id="drop-down-content-setter">
+                    <button onClick={showDropDownMenuTwo} className="relative flex items-center justify-between w-full px-5 py-4 dropbtn-one">
+                      <span className="pr-4 text-sm font-medium text-gray-600" id="drop-down-content-setter3">
                       Please select your cusine choice..
                       </span>
                       <svg id="rotate" className="absolute z-10 cursor-pointer right-5" width={10} height={6} viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M0.5 0.75L5 5.25L9.5 0.75" stroke="#4B5563" strokeLinecap="round" strokeLinejoin="round" />
                       </svg>
                     </button>
-                    <div className="absolute z-20 right-0 hidden w-full px-1 py-2 bg-white border-t border-gray-200 rounded shadow top-12" id="drop-down-div">
-                      <a href="javascript:void(0)" className="hover"><p className="p-3 text-sm leading-none text-gray-600 cursor-pointer hover:bg-indigo-100 hover:font-medium hover:text-indigo-700 hover:rounded" onClick={swaptext}>
+                    <div className="absolute z-20 right-0 hidden w-full px-1 py-2 bg-white border-t border-gray-200 rounded shadow top-12" id="drop-down-div3">
+                      <a href="javascript:void(0)" className="hover"><p className="p-3 text-sm leading-none text-gray-600 cursor-pointer hover:bg-indigo-100 hover:font-medium hover:text-indigo-700 hover:rounded" onClick={swaptext3}>
                             main course
                           
                         </p></a>
-                      <a href="javascript:void(0)"><p className="p-3 text-sm leading-none text-gray-600 cursor-pointer hover:bg-indigo-100 hover:font-medium hover:text-indigo-700 hover:rounded" onClick={swaptext}>
+                      <a href="javascript:void(0)"><p className="p-3 text-sm leading-none text-gray-600 cursor-pointer hover:bg-indigo-100 hover:font-medium hover:text-indigo-700 hover:rounded" onClick={swaptext3}>
                             side dish
                           
                         </p></a>
-                      <a href="javascript:void(0)"><p className="p-3 text-sm leading-none text-gray-600 cursor-pointer hover:bg-indigo-100 hover:font-medium hover:text-indigo-700 hover:rounded" onClick={swaptext}>
+                      <a href="javascript:void(0)"><p className="p-3 text-sm leading-none text-gray-600 cursor-pointer hover:bg-indigo-100 hover:font-medium hover:text-indigo-700 hover:rounded" onClick={swaptext3}>
                           dessert
                           
                         </p></a>
-                      <a href="javascript:void(0)"><p className="p-3 text-sm leading-none text-gray-600 cursor-pointer hover:bg-indigo-100 hover:font-medium hover:text-indigo-700 hover:rounded" onClick={swaptext}>
+                      <a href="javascript:void(0)"><p className="p-3 text-sm leading-none text-gray-600 cursor-pointer hover:bg-indigo-100 hover:font-medium hover:text-indigo-700 hover:rounded" onClick={swaptext3}>
                             appetizer
                           
                         </p></a>
-                      <a href="javascript:void(0)"><p className="p-3 text-sm leading-none text-gray-600 cursor-pointer hover:bg-indigo-100 hover:font-medium hover:text-indigo-700 hover:rounded" onClick={swaptext}>
+                      <a href="javascript:void(0)"><p className="p-3 text-sm leading-none text-gray-600 cursor-pointer hover:bg-indigo-100 hover:font-medium hover:text-indigo-700 hover:rounded" onClick={swaptext3}>
                           salad
                         </p></a>
-                      <a href="javascript:void(0)"><p className="p-3 text-sm leading-none text-gray-600 cursor-pointer hover:bg-indigo-100 hover:font-medium hover:text-indigo-700 hover:rounded" onClick={swaptext}>
+                      <a href="javascript:void(0)"><p className="p-3 text-sm leading-none text-gray-600 cursor-pointer hover:bg-indigo-100 hover:font-medium hover:text-indigo-700 hover:rounded" onClick={swaptext3}>
                           breakfast
                         </p></a>
-                      <a href="javascript:void(0)"><p className="p-3 text-sm leading-none text-gray-600 cursor-pointer hover:bg-indigo-100 hover:font-medium hover:text-indigo-700 hover:rounded" onClick={swaptext}>
+                      <a href="javascript:void(0)"><p className="p-3 text-sm leading-none text-gray-600 cursor-pointer hover:bg-indigo-100 hover:font-medium hover:text-indigo-700 hover:rounded" onClick={swaptext3}>
                           soup
                         </p></a>
-                      <a href="javascript:void(0)"><p className="p-3 text-sm leading-none text-gray-600 cursor-pointer hover:bg-indigo-100 hover:font-medium hover:text-indigo-700 hover:rounded" onClick={swaptext}>
+                      <a href="javascript:void(0)"><p className="p-3 text-sm leading-none text-gray-600 cursor-pointer hover:bg-indigo-100 hover:font-medium hover:text-indigo-700 hover:rounded" onClick={swaptext3}>
                             snack
                           
                         </p></a>
-                      <a href="javascript:void(0)"><p className="p-3 text-sm leading-none text-gray-600 cursor-pointer hover:bg-indigo-100 hover:font-medium hover:text-indigo-700 hover:rounded" onClick={swaptext}>
+                      <a href="javascript:void(0)"><p className="p-3 text-sm leading-none text-gray-600 cursor-pointer hover:bg-indigo-100 hover:font-medium hover:text-indigo-700 hover:rounded" onClick={swaptext3}>
                             drink
                           
                         </p></a>

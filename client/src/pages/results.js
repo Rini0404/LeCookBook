@@ -6,7 +6,7 @@ const Results = () => {
   return (
     <div className = "flex flex-wrap justify-center py-4 ">
       <div className = "px-4 pb-4">
-        <div className="ayo max-w-sm bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700">
+        <div className="ayo max-w-sm bg-blue-500 rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700">
         <a href="#">
             <img className="rounded-t-lg" src={Test} alt="" />
         </a>
