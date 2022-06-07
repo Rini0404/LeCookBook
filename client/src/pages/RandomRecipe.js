@@ -1,11 +1,16 @@
 import React, { useState } from 'react';
+<<<<<<< HEAD
 import Button from 'react-bootstrap/Button';
 import Test from "../cookie-tin.jpg";
 import { Link } from "react-router-dom";
+=======
+// import button from 'react-bootstrap/button';
+>>>>>>> 88d97846cca72420992ab4d32bebc64849d0d96e
 
 function RandomRecipe(props) {
     return (
         <div className='container'>
+<<<<<<< HEAD
         <Link to="/random">
           <Button>Not Interested</Button>
         </Link>
@@ -50,6 +55,18 @@ function RandomRecipe(props) {
           <Button>I like it, Picasso</Button>
         </Link>
             </div>
+=======
+            <button>
+                button1
+            </button>
+            <div>
+                Container For Recipe Card
+                
+            </div>
+            <button>
+                button2
+            </button>
+>>>>>>> 88d97846cca72420992ab4d32bebc64849d0d96e
         </div>
 
 

@@ -1,27 +1,34 @@
 import React from "react";
-import Jumbotron from "../components/Jumbotron";
-import Button from 'react-bootstrap/Button';
 import { Link } from "react-router-dom";
+import Logo from "../logo.png";
 
 const Home = () => {
   return (
+    <>
+    
+    <div className=" flex	justify-center py-20	">
+      <jumbotron >
+      
+      <div className="flex justify-center">
+        <img className="logo " src={Logo} />
+      </div>
 
-    <div className=" flex justify-items-center	justify-center py-20	">
-      <Jumbotron>
-        <h1>LeCookBook (logo)</h1>
         <Link to="/Form">
-          <Button>
+          <button>
             {/* search bar component */}
             Search For a Recipe
-          </Button>
+          </button>
         </Link>
-
+        
         <Link to="/random">
-          <Button>Random Recipe</Button>
+          <button>Random Recipe</button>
         </Link>
-      </Jumbotron>
+      
+      </jumbotron>
 
     </div>
+    
+    </>
   );
 };
 

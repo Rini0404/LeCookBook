@@ -20,6 +20,7 @@ import Success from './pages/Success';
 import RandomRecipe from './pages/RandomRecipe';
 import Form from './components/FoodFrom/index';
 import Results from './pages/results';
+import CookBook from './pages/CookBook';
 import Footer from './components/Footer/Footer'
 
 const httpLink = createHttpLink({
@@ -85,6 +86,10 @@ function App() {
               <Route 
                 path="/random" 
                 element={<RandomRecipe />} 
+              />
+              <Route 
+                path="/CookBook" 
+                element={<CookBook />} 
               />
               <Route 
                 path="*" 
