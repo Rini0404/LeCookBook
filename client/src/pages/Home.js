@@ -1,7 +1,4 @@
 import React from "react";
-import ProductList from "../components/ProductList";
-import CategoryMenu from "../components/CategoryMenu";
-import Cart from "../components/Cart";
 import { Button } from 'react-daisyui';
 import { Link } from "react-router-dom";
 

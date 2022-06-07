@@ -209,31 +209,18 @@ input:focus {
   }
 }
 
-.parent {
-  display: grid;
-  border: 2px solid red; 
-  grid-template-columns: repeat(10, 1fr);
-  grid-template-rows: repeat(10, 1fr);
-  grid-column-gap: 0px;
-  grid-row-gap: 0px;
-  }
-  
-  .div1 { grid-area: 2 / 2 / 9 / 4; }
-  .div2 { grid-area: 2 / 5 / 9 / 7; }
-  .div3 { grid-area: 2 / 8 / 9 / 10; }
-  .div4 { grid-area: 8 / 2 / 9 / 3; }
-  .div5 { grid-area: 8 / 3 / 9 / 4; }
-  .div6 { grid-area: 2 / 2 / 5 / 4; }
-  .div7 { grid-area: 5 / 2 / 8 / 4; }
-  .div8 { grid-area: 2 / 5 / 5 / 7; }
-  .div9 { grid-area: 5 / 5 / 8 / 7; }
-  .div10 { grid-area: 8 / 5 / 9 / 6; }
-  .div11 { grid-area: 8 / 6 / 9 / 7; }
-  .div12 { grid-area: 2 / 8 / 5 / 10; }
-  .div13 { grid-area: 5 / 8 / 8 / 10; }
-  .div14 { grid-area: 8 / 8 / 9 / 9; }
-  .div15 { grid-area: 8 / 9 / 9 / 10; }
-  .div16 { grid-area: 8 / 9 / 9 / 10; }
+footer{
+  position:fixed; 
+  bottom: 0;
+  z-index: 1000;
+}
+
+
+.footer-icons {
+
+  font-size: 2.5em !important;
+
+}
 
 @tailwind base;
 @tailwind components;

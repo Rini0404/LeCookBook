@@ -7,7 +7,7 @@ import {
   createHttpLink,
 } from '@apollo/client';
 import { setContext } from '@apollo/client/link/context';
-
+import './index.css';
 import Home from './pages/Home';
 import Detail from './pages/Detail';
 import NoMatch from './pages/NoMatch';
@@ -17,7 +17,9 @@ import Nav from './components/Nav';
 import { StoreProvider } from './utils/GlobalState';
 import Success from './pages/Success';
 import OrderHistory from './pages/OrderHistory';
-import Form from './components/FoodFrom/index'
+import Form from './components/FoodFrom/index';
+import Results from './pages/results';
+import Footer from './components/Footer/Footer'
 
 const httpLink = createHttpLink({
   uri: '/graphql',
@@ -75,11 +77,17 @@ function App() {
                 element={<Form />} 
               />
               <Route 
+                path="/Results" 
+                element={<Results />} 
+              />
+              <Route 
                 path="*" 
                 element={<NoMatch />} 
               />
+
             </Routes>
           </StoreProvider>
+          <Footer />
         </div>
       </Router>
     </ApolloProvider>
