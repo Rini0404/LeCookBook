@@ -146,7 +146,7 @@ function index() {
               <div className="bg-white rounded shadow mt-7 py-7">
                 <div className="mt-10 px-7 ">
                   <p className="text-xl font-semibold leading-tight text-gray-800">Food Details Here!</p>
-                  {/* imput data goes here.... */}
+                  {/* input data goes here.... */}
                   {/* add a form tag later */}
                   <div className="grid w-full grid-cols-1 lg:grid-cols-2 md:grid-cols-1 gap-7 mt-7 ">
                     <div>
