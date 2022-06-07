@@ -1,5 +1,5 @@
 import react from "react";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 
 let apiResults = ''
 let recipe1 = ''
@@ -9,7 +9,6 @@ let recipe3 = ''
 try {
 
 apiResults = JSON.parse(localStorage.getItem('apiResults'))
-    
 recipe1 = apiResults.results[0]
 recipe2 = apiResults.results[1]
 recipe3 = apiResults.results[2]
