@@ -1,28 +1,27 @@
 import React from "react";
-import { Button } from 'react-daisyui';
+import Jumbotron from "../components/Jumbotron";
+import Button from 'react-bootstrap/Button';
 import { Link } from "react-router-dom";
-
-
-
-
-
-
 
 const Home = () => {
   return (
-    <div className = " flex justify-items-center	justify-center py-20	">
-        <Link to = "/Form">
-        <Button variant="outline">
-        Form Choice
-      </Button>
-      </Link>
 
-        {/* <Link to = "/Form"> */}
-        <Button variant="outline">
-        Hot Or Not
-      </Button>
-      {/* </Link> */}
-  </div>
+    <div className=" flex justify-items-center	justify-center py-20	">
+      <Jumbotron>
+        <h1>LeCookBook (logo)</h1>
+        <Link to="/Form">
+          <Button>
+            {/* search bar component */}
+            Search For a Recipe
+          </Button>
+        </Link>
+
+        <Link to="/random">
+          <Button>Random Recipe</Button>
+        </Link>
+      </Jumbotron>
+
+    </div>
   );
 };
 
