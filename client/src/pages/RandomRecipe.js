@@ -1,13 +1,14 @@
 import React, { useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import Test from "../cookie-tin.jpg";
+import { Link } from "react-router-dom";
 
 function RandomRecipe(props) {
     return (
         <div className='container'>
-            <Button>
-                NOT
-            </Button>
+        <Link to="/random">
+          <Button>Not Interested</Button>
+        </Link>
 
             <div className = "px-4 pb-4">
         <div className="ayo max-w-sm bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700">
@@ -45,9 +46,9 @@ function RandomRecipe(props) {
         </div>
       </div>
     </div>
-            <Button>
-                HOT
-            </Button>
+    <Link to="/random">
+          <Button>I like it, Picasso</Button>
+        </Link>
             </div>
         </div>
 
