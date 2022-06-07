@@ -208,13 +208,16 @@ input:focus {
     width: 100%;
   }
 }
-
+/* 
 footer{
   position:fixed; 
   bottom: 0;
   z-index: 1000;
-}
+} */
 
+.logo{
+  height: 60vh;
+}
 
 .footer-icons {
 
