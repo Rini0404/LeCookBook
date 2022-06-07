@@ -209,8 +209,19 @@ input:focus {
   }
 }
 
+footer{
+  position:fixed; 
+  bottom: 0;
+  z-index: 1000;
+}
 
+
+.footer-icons {
+
+  font-size: 2.5em !important;
+
+}
 
 @tailwind base;
 @tailwind components;
-@tailwind utilities;
+@tailwind utilities; 

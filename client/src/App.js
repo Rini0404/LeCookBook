@@ -1,5 +1,5 @@
 import React from 'react';
-import 'bootstrap/dist/css/bootstrap.min.css';
+// import 'bootstrap/dist/css/bootstrap.min.css';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import {
   ApolloClient,
@@ -8,7 +8,7 @@ import {
   createHttpLink,
 } from '@apollo/client';
 import { setContext } from '@apollo/client/link/context';
-
+import './index.css';
 import Home from './pages/Home';
 import Detail from './pages/Detail';
 import NoMatch from './pages/NoMatch';
@@ -18,6 +18,9 @@ import Nav from './components/Nav';
 import { StoreProvider } from './utils/GlobalState';
 import Success from './pages/Success';
 import RandomRecipe from './pages/RandomRecipe';
+import Form from './components/FoodFrom/index';
+import Results from './pages/results';
+import Footer from './components/Footer/Footer'
 
 const httpLink = createHttpLink({
   uri: '/graphql',
@@ -43,7 +46,6 @@ function App() {
     <ApolloProvider client={client}>
       <Router>
         <div>
-      
           <StoreProvider>
             <Nav />
             <Routes>
@@ -68,6 +70,18 @@ function App() {
                 path="/products/:id" 
                 element={<Detail />} 
               />
+                            <Route 
+                path="/Form" 
+                element={<Form />} 
+              />
+              <Route 
+                path="/Results" 
+                element={<Results />} 
+              />
+              <Route 
+                path="*" 
+                element={<NoMatch />} 
+              />
               <Route 
                 path="/random" 
                 element={<RandomRecipe />} 
@@ -78,6 +92,7 @@ function App() {
               />
             </Routes>
           </StoreProvider>
+          <Footer />
         </div>
       </Router>
     </ApolloProvider>
