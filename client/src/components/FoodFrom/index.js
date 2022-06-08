@@ -5,6 +5,10 @@ const apiQuery = async () => {
   // This is the base URL we will use to make our API call.
   // Any parameters the user adds will be appended to the end of this URL.
 
+  if (localStorage.getItem("offset")) {
+    localStorage.removeItem("offset");
+  }
+
   let URL =
     "https://api.spoonacular.com/recipes/complexSearch?apiKey=30b13071146948258c7fd48333730276";
 
@@ -80,6 +84,7 @@ const apiQuery = async () => {
     let apiResults = await response.json();
     console.log(apiResults);
     localStorage.setItem("apiResults", JSON.stringify(apiResults));
+    localStorage.setItem("apiCall", JSON.stringify(URL));
     window.location.pathname = "/Results";
   } catch (err) {
     console.log(err.message);
