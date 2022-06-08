@@ -93,14 +93,6 @@ function Login(props) {
                 >
                   submit
                 </button>
-                <a
-                  href="#"
-                  type="button"
-                  class="inline-flex justify-center py-4 text-base font-medium text-gray-500 focus:outline-none hover:text-neutral-600 focus:text-blue-600 sm:text-sm"
-                >
-                  {" "}
-                  Forgot your Password?{" "}
-                </a>
               </div>
             </div>
           </div>
@@ -110,6 +102,11 @@ function Login(props) {
               src={ test}
             />
           </div>
+          {error ? (
+          <div className = "text-center">
+            <p className="error-text">The provided credentials are incorrect</p>
+          </div>
+        ) : null}
         </div>
       </form>
     </div>
