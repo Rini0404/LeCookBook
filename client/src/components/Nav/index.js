@@ -175,7 +175,7 @@ function Nav() {
                 Sign In
               </button>
             </Link>
-            <Link to="/sigup">
+            <Link to="/signup">
               <button text="" size="sm">
                 Sign Up
               </button>
@@ -221,7 +221,7 @@ function Nav() {
                     Sign In
                   </button>
                 </Link>
-                <Link to="/sigup">
+                <Link to="/signup">
                   <button size="sm">
                     Sign Up
                   </button>
