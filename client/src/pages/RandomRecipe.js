@@ -1,26 +1,45 @@
 import React, { useState } from 'react';
 import Button from 'react-bootstrap/Button';
-import Test from "../cookie-tin.jpg";
+// import Test from "../cookie-tin.jpg";
 import { Link } from "react-router-dom";
 
 let apiResults = ''
 let recipe1 = ''
 
-try {
+const apiQuery = async () => {
+  // This is the base URL we will use to make our API call.
+  // Any parameters the user adds will be appended to the end of this URL.
 
-    apiResults = JSON.parse(localStorage.getItem('apiResults'))
-        
-    recipe1 = apiResults.results[0]
-    console.log('Recipes defined.')
-}
-catch (err) {
-    console.log(err)
-  }
+      // call to api for 'random' recipes
+  let URL =
+    "https://api.spoonacular.com/recipes/random?number=1&apiKey=30b13071146948258c7fd48333730276";
 
-function stripString(string) {
-    string = string.substring(0, string.indexOf('From preparation to the plate'))
-    return string.replace(/(<([^>]+)>)/gi, "")
+  // First we grab the values of all the forms on the page.
+
+  
+
+  // Then we check to make sure the values are not the default value.
+  // If they are the default values, we move on to the next if statement.
+  // If they are anything but the default values, we define the parameter and append it to the URL.
+  // We use regEx to replace any spaces with a + to ensure we have a valid URL to make our API call.
+
+  
+  try {
+    // First we get the response from our API query.
+    const response = await fetch(URL);
+    if (!response.ok) {
+      throw new Error(
+        `This is an HTTP error: The status is ${response.status}`
+      );
+    }
+    
+  } catch (err) {
+    console.log(err.message);
   }
+};
+
+
+
 
 function RandomRecipe(props) {
     return (
@@ -28,7 +47,7 @@ function RandomRecipe(props) {
             <div className = "px-4 pb-4">
         <div className="ayo max-w-sm bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700">
         <a href="#">
-            <img className="rounded-t-lg" src={Test} alt="" />
+            {/* <img className="rounded-t-lg" src={Test} alt="" /> */}
         </a>
         <div className="p-5">
                   {/* import title of dish here */}

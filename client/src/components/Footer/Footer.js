@@ -76,6 +76,9 @@ const Footer4 = () => {
           </div>
         </div>
       </div>
+      <div>
+        
+      </div>
     </footer>
   );
 };
