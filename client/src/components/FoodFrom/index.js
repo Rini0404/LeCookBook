@@ -5,15 +5,24 @@ import { Link } from "react-router-dom";
 
 const apiQuery = async () => {
 
+  // This is the base URL we will use to make our API call.
+  // Any parameters the user adds will be appended to the end of this URL.
+
   let URL = 'https://api.spoonacular.com/recipes/complexSearch?apiKey=30b13071146948258c7fd48333730276'
 
-  
+  // First we grab the values of all the forms on the page.
+
   let includeIngredient = document.getElementById("includeIngredient").value;
   let excludeIngredient = document.getElementById("excludeIngredient").value;
   let cuisine = document.getElementById("drop-down-content-setter").innerText;
   let diet = document.getElementById("drop-down-content-setter2").innerText;
   let intolerances = document.getElementById("drop-down-content-setter-one").innerText;
   let typeOfDish = document.getElementById("drop-down-content-setter3").innerText;
+
+  // Then we check to make sure the values are not the default value.
+  // If they are the default values, we move on to the next if statement.
+  // If they are anything but the default values, we define the parameter and append it to the URL.
+  // We use regEx to replace any spaces with a + to ensure we have a valid URL to make our API call.
 
   if (includeIngredient != '') {
     let parameter = `&includeIngredients=${includeIngredient}`;
@@ -49,35 +58,24 @@ const apiQuery = async () => {
     URL = URL + parameter;
   }
 
+  // Finally, we append these parameters to our URL.
+  // This tells the API to sort these items by most popular to least, to get all the ingredients, and get all the cooking steps.
   URL = URL + '&sort=popularity&sortDirection=asc&fillIngredients=true&instructionsRequired=true&number=3&addRecipeInformation=true';
 
   console.log(URL)
 
   try {
+    // First we get the response from our API query.
     const response = await fetch(URL);
     if (!response.ok) {
       throw new Error(
         `This is an HTTP error: The status is ${response.status}`
       );
     }
-    let actualData = await response.json();
-    console.log(actualData)
-    console.log(actualData.totalResults)
-    // For each recipe, we will need to map over the following results.
-    console.log(actualData.results[0].image)
-    console.log(actualData.results[0].title)
-    console.log(actualData.results[0].summary)
-    console.log(actualData.results[0].cuisines[0])
-    // Need to map over this to get all ingredients.
-    console.log(actualData.results[0].extendedIngredients[0].original)
-    // Need to map over this to get all steps.
-    console.log(actualData.results[0].analyzedInstructions[0].steps[0].step)
-
-    // What we need to do:
-    // Get the length of the results array to map over each result.
-    // Get the length of the extendedIngredients array to map over each result.
-    // Get the length of the analyzedInstructions array to map over each result.
-    // Get the length of the steps array to map over each result.
+    // We store the value of the response in a JSON object called actualData.
+    let apiResults = await response.json();
+    console.log(apiResults)
+    localStorage.setItem("apiResults", JSON.stringify(apiResults));
   }
   catch (err) {
     console.log(err.message);
@@ -123,16 +121,6 @@ function index() {
     document.getElementById("drop-down-content-setter-one").innerText =
       targetText;
     document.getElementById("drop-down-div-one").classList.toggle("hidden");
-
-  }
-  function showDropDownMenutwo(el) {
-    el.target.parentElement.children[1].classList.toggle("hidden");
-  }
-  function swaptexttwo(el) {
-    const targetText = el.target.innerHTML;
-    document.getElementById("drop-down-content-setter-two").innerHTML =
-      targetText;
-    document.getElementById("drop-down-div-two").classList.toggle("hidden");
 
   }
 

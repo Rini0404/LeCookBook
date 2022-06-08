@@ -3,6 +3,25 @@ import Button from 'react-bootstrap/Button';
 import Test from "../cookie-tin.jpg";
 import { Link } from "react-router-dom";
 
+let apiResults = ''
+let recipe1 = ''
+
+try {
+
+    apiResults = JSON.parse(localStorage.getItem('apiResults'))
+        
+    recipe1 = apiResults.results[0]
+    console.log('Recipes defined.')
+}
+catch (err) {
+    console.log(err)
+  }
+
+function stripString(string) {
+    string = string.substring(0, string.indexOf('From preparation to the plate'))
+    return string.replace(/(<([^>]+)>)/gi, "")
+  }
+
 function RandomRecipe(props) {
     return (
         <div className='container'>
