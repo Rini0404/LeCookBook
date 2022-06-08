@@ -8,12 +8,12 @@ let recipe3 = ''
 
 try {
 
-apiResults = JSON.parse(localStorage.getItem('apiResults'))
-recipe1 = apiResults.results[0]
-recipe2 = apiResults.results[1]
-recipe3 = apiResults.results[2]
+  apiResults = JSON.parse(localStorage.getItem('apiResults'))
+  recipe1 = apiResults.results[0]
+  recipe2 = apiResults.results[1]
+  recipe3 = apiResults.results[2]
 
-console.log('Recipes defined.')
+  console.log('Recipes defined.')
 }
 catch (err) {
   console.log(err)
@@ -30,7 +30,7 @@ const Results = () => {
     <div className="flex flex-wrap justify-center py-4 ">
       <div className="px-4 pb-4">
         <div className="ayo max-w-sm bg-blue-500 rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700">
-            <img className="rounded-t-lg" src={recipe1.image} alt="" />
+          <img className="rounded-t-lg" src={recipe1.image} alt="" />
           <div className="p-5">
             {/* import title of dish here */}
             <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 
@@ -68,7 +68,7 @@ const Results = () => {
 
       <div className="px-4 pb-4">
         <div className="ayo max-w-sm bg-blue-500 rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700">
-            <img className="rounded-t-lg" src={recipe2.image} alt="" />
+          <img className="rounded-t-lg" src={recipe2.image} alt="" />
           <div className="p-5">
             {/* import title of dish here */}
             <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 
@@ -104,7 +104,7 @@ const Results = () => {
 
       <div className="px-4 pb-4">
         <div className="ayo max-w-sm bg-blue-500 rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700">
-            <img className=" bg-cover rounded-t-lg" src={recipe3.image} alt="" ></img>
+          <img className=" bg-cover rounded-t-lg" src={recipe3.image} alt="" ></img>
           <div className="p-5">
             {/* import title of dish here */}
             <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 
