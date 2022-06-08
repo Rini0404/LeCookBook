@@ -1,5 +1,8 @@
 import react from "react";
+// import Favorite from '../components/FoodFrom/Sections/Favorite';
 // import { Link } from "react-router-dom";
+
+
 
 let apiResults = ''
 let recipe1 = ''
