@@ -232,7 +232,9 @@ footer{
 .header{
   color: black;
 }
-
+.mealHP {
+  color:#b2492e
+}
 @tailwind base;
 @tailwind components;
 @tailwind utilities;

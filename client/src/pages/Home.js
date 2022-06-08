@@ -16,7 +16,7 @@ const Home = () => {
         <div className="flex flex-col justify-center p-6 text-center rounded-sm lg:max-w-md xl:max-w-lg lg:text-left">
           <h1 className="text-5xl font-bold leading-none sm:text-6xl">
             Find your next
-            <span className="dark:text-violet-400">&nbsp; Meal</span>&nbsp; With Us!
+            <span className="mealHP">&nbsp; Meal</span>&nbsp; With Us!
           </h1>
           <p className="mt-6 mb-8 text-lg sm:mb-12">
             Dictum aliquam porta in condimentum ac integer
@@ -29,7 +29,7 @@ const Home = () => {
             <a
               rel="noopener noreferrer"
               href="#"
-              className="px-8 py-3 text-lg font-semibold rounded dark:bg-violet-400 dark:text-coolGray-900"
+              className="px-8 py-3 text-lg font-semibold rounded border rounded dark:border-coolGray-100"
             >
               Le Search
             </a>
