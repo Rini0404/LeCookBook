@@ -10,7 +10,6 @@ let recipe2 = ''
 let recipe3 = ''
 
 try {
-
   apiResults = JSON.parse(localStorage.getItem('apiResults'))
   recipe1 = apiResults.results[0]
   recipe2 = apiResults.results[1]
@@ -22,15 +21,78 @@ catch (err) {
   console.log(err)
 }
 
+const apiQuery = async () => {
+  let URL = JSON.parse(localStorage.getItem("apiCall"));
+  let newURL = ''
+  if (localStorage.getItem("offset")) {
+    let offset = parseInt(localStorage.getItem("offset")) + 3
+    localStorage.setItem("offset", JSON.stringify(offset))
+    let parameter = `&offset=${offset.toString()}`
+    newURL = URL + parameter
+  }
+  else {
+    let offset = 3;
+    localStorage.setItem("offset", JSON.stringify(offset))
+    let parameter = `&offset=${offset.toString()}`
+    newURL = URL + parameter
+  }
 
+  try {
+    const response = await fetch(newURL);
+    if (!response.ok) {
+      throw new Error(
+        `This is an HTTP error: The status is ${response.status}`
+      );
+    }
+    let apiResults = await response.json();
+    localStorage.setItem("apiResults", JSON.stringify(apiResults));
+    window.location.pathname = "/Results";
+    window.location.reload()
+  } catch (err) {
+    console.log(err.message);
+  }
+}
+
+const previousResults = async () => {
+  let URL = JSON.parse(localStorage.getItem("apiCall"));
+  let newURL = ''
+
+  if (localStorage.getItem("offset")) {
+    let offset = parseInt(localStorage.getItem("offset")) - 3
+    localStorage.setItem("offset", JSON.stringify(offset))
+    let parameter = `&offset=${offset.toString()}`
+    newURL = URL + parameter
+  }
+  else {
+    let offset = 3;
+    localStorage.setItem("offset", JSON.stringify(offset))
+    let parameter = `&offset=${offset.toString()}`
+    newURL = URL + parameter
+  }
+
+  try {
+    console.log(newURL)
+    const response = await fetch(newURL);
+    if (!response.ok) {
+      throw new Error(
+        `This is an HTTP error: The status is ${response.status}`
+      );
+    }
+    let apiResults = await response.json();
+    console.log(apiResults);
+    localStorage.setItem("apiResults", JSON.stringify(apiResults));
+    window.location.pathname = "/Results";
+    window.location.reload()
+  } catch (err) {
+    console.log(err.message);
+  }
+}
 
 function saveRecipeId (id) {
   console.log(id)
 }
 
-
 function stripString(string) {
-  string = string.substring(0, string.indexOf('From preparation to the plate'))
   return string.replace(/(<([^>]+)>)/gi, "")
 }
 
@@ -58,6 +120,16 @@ const Results = () => {
               {/* Buttons need to have an OnClick for adding to you new CookBook */}
               <button href="#" className="px-4 inline-flex items-center py-2 px-3 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
                 More Details
+                <svg className="ml-2 -mr-1 w-4 h-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+              </button>
+
+              <button onClick={previousResults} className="px-4 inline-flex items-center py-2 px-3 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                Previous Results
+                <svg className="ml-2 -mr-1 w-4 h-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+              </button>
+
+              <button onClick={apiQuery} className="px-4 inline-flex items-center py-2 px-3 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                New Results
                 <svg className="ml-2 -mr-1 w-4 h-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
               </button>
 
