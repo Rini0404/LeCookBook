@@ -30,9 +30,7 @@ const Results = () => {
     <div className="flex flex-wrap justify-center py-4 ">
       <div className="px-4 pb-4">
         <div className="ayo max-w-sm bg-blue-500 rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700">
-          <a href="#">
             <img className="rounded-t-lg" src={recipe1.image} alt="" />
-          </a>
           <div className="p-5">
             {/* import title of dish here */}
             <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 
@@ -70,9 +68,7 @@ const Results = () => {
 
       <div className="px-4 pb-4">
         <div className="ayo max-w-sm bg-blue-500 rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700">
-          <a href="#">
             <img className="rounded-t-lg" src={recipe2.image} alt="" />
-          </a>
           <div className="p-5">
             {/* import title of dish here */}
             <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 
@@ -108,9 +104,7 @@ const Results = () => {
 
       <div className="px-4 pb-4">
         <div className="ayo max-w-sm bg-blue-500 rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700">
-          <a href="#">
-            <img className="rounded-t-lg" src={recipe3.image} alt="" />
-          </a>
+            <img className=" bg-cover rounded-t-lg" src={recipe3.image} alt="" ></img>
           <div className="p-5">
             {/* import title of dish here */}
             <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 
