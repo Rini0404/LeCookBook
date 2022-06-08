@@ -82,7 +82,7 @@ function Nav() {
             className="text-white text-3xl cursor-pointer lg:hidden"
           />
           {mobileOpen && (
-            <div className="bg-blue-800 absolute top-full left-0 flex flex-col w-full pb-8 lg:hidden">
+            <div className="absolute top-full left-0 flex flex-col w-full pb-8 lg:hidden">
               <div className="pt-4 flex-1 flex flex-col items-center text-xl">
                 <Link to='/'>
                 <a
@@ -134,7 +134,7 @@ function Nav() {
       );
     } else {
       return (
-        <div className="flex items-center h-20 px-6 justify-between border-b border-gray-300 bg-blue-800 text-white relative z-50">
+        <div className="headerBG flex items-center h-20 px-6 justify-between border-b border-gray-300 text-white relative z-50">
           <div className="h-8">
             <img
               src= {Logo }
@@ -145,7 +145,7 @@ function Nav() {
             <Link to = "/">
             <a
               href="#"
-              className="no-underline px-2 mr-3 text-gray-200 font-medium hover:text-blue-400"
+              className="header no-underline px-2 mr-3 text-gray-200 font-medium hover:text-blue-400"
             >
               Home
             </a>
@@ -175,7 +175,7 @@ function Nav() {
                 Sign In
               </button>
             </Link>
-            <Link to="/sigup">
+            <Link to="/signup">
               <button text="" size="sm">
                 Sign Up
               </button>
@@ -221,7 +221,7 @@ function Nav() {
                     Sign In
                   </button>
                 </Link>
-                <Link to="/sigup">
+                <Link to="/signup">
                   <button size="sm">
                     Sign Up
                   </button>

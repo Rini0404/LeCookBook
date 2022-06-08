@@ -6,9 +6,9 @@ const CookBook = () => {
   if (Auth.loggedIn()) {
     return (
       <>
-        <aside class="ml-[-100%] fixed z-10 top-0 pb-3 px-6 w-full flex flex-col justify-between h-screen border-r bg-white transition duration-300 md:w-4/12 lg:ml-0 lg:w-[25%] xl:w-[20%] 2xl:w-[15%]">
+      {/* Fixed */}
+        <aside class="ml-[-100%]  z-10 top-0 pb-3 px-6 w-full flex flex-col justify-between h-screen border-r bg-white transition duration-300 md:w-4/12 lg:ml-0 lg:w-[25%] xl:w-[20%] 2xl:w-[15%]">
           <div>
-
             <div class="mt-8 text-center">
               <img
                 src= { Test }
@@ -182,11 +182,17 @@ const CookBook = () => {
           </div>
         </aside>
 
-        <div class="ml-auto mb-6 lg:w-[75%] xl:w-[80%] 2xl:w-[85%]">
+        <div class="ml-auto mb-6 lg:w-[75%] xl:w-[80%] 2xl:w-[85%] border-2-red">
           <div class="px-6 pt-6 2xl:container">
             <div class="flex justify-center items-center h-[80vh] border-2 border-dashed border-gray-300 rounded-xl max-w-screen-xl	">
               {/* Place Content Here.... */}
-
+              <div class="w-full space-y-0.5">
+                <label for="photo" class="text-xs font-medium text-gray-500"> Your Photo </label>
+                <input
+                  id="photo"
+                  type="file"
+                  class="block w-full cursor-pointer appearance-none rounded-md border border-gray-200 bg-white px-3 py-2 text-sm transition focus:border-blue-600 focus:outline-none focus:ring-1 focus:ring-blue-600 disabled:cursor-not-allowed disabled:bg-gray-200 disabled:opacity-75" />
+              </div>
               <span>Content</span>
             </div>
           </div>
