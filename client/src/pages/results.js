@@ -24,7 +24,7 @@ catch (err) {
 
 
 
-function saveRecipeId (id) {
+function saveRecipeId(id) {
   console.log(id)
 }
 
@@ -36,7 +36,15 @@ function stripString(string) {
 
 const Results = () => {
   return (
+
     <div className="flex flex-wrap justify-center py-4 ">
+
+      {/* Optiional go back button for previous results */}
+      {/* <div className="nextButton">
+        <button>Button for next page</button>
+      </div> */}
+
+
       <div className="px-4 pb-4">
         <div className="ayo max-w-sm bg-blue-500 rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700">
           <img className="rounded-t-lg" src={recipe1.image} alt="" />
@@ -72,7 +80,6 @@ const Results = () => {
         </div>
       </div>
       {/* add new card here and leave one closing </div> */}
-
 
 
       <div className="px-4 pb-4">
@@ -145,7 +152,13 @@ const Results = () => {
           </div>
         </div>
       </div>
+
+      <div className="nextButton">
+        <button>Button for next page</button>
+      </div>
+
     </div>
+
   );
 };
 
