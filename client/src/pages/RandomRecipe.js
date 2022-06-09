@@ -1,6 +1,10 @@
 import React, { useState } from 'react';
 import Button from 'react-bootstrap/Button';
+<<<<<<< HEAD
 // import Test from "../cookie-tin.jpg";
+=======
+// import Test from "../";
+>>>>>>> 3bedd6d82613c0538e854ee2e5b21cc7647f76da
 import { Link } from "react-router-dom";
 
 let apiResults = ''
