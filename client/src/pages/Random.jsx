@@ -2,7 +2,7 @@ import Veggie from "../components/Veggie";
 import Popular from "../components/Popular";
 import {motion} from 'framer-motion';
 
-function Home() {
+function Random() {
   return (
     <motion.div
       animate={{opacity:1}}
@@ -15,4 +15,4 @@ function Home() {
   )
 }
 
-export default Home
+export default Random

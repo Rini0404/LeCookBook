@@ -15,9 +15,7 @@ function Login() {
       const mutationResponse = await login({
         variables: { email: formState.email, password: formState.password },
       });
-      console.log(mutationResponse);
       const token = mutationResponse.data.login.token;
-      console.log(token);
       Auth.login(token);
     } catch (e) {
       console.log(e);
@@ -47,11 +45,11 @@ function Login() {
               <div class="mt-3 text-left sm:mt-5">
                 <div class="inline-flex items-center w-full">
                   <h3 class="text-lg font-bold text-neutral-600 l eading-6 lg:text-5xl">
-                    Sign up
+                    Sign In
                   </h3>
                 </div>
                 <div class="mt-4 text-base text-gray-500">
-                  <p>Sign up and get our newest news.</p>
+                  <p>Sign In to see whats cooking...</p>
                 </div>
               </div>
             </div>
