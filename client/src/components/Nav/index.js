@@ -25,13 +25,13 @@ function Nav() {
             <img image src={Logo} className="h-full" />
           </div>
           <div className="flex-1 ml-10 items-center hidden lg:flex">
-            <Link to ="/">
-            <a
-              href="#"
-              className="no-underline px-2 mr-3 text-gray-200 font-medium hover:text-blue-400"
-            >
-              Home
-            </a>
+            <Link to="/">
+              <a
+                href="#"
+                className="no-underline px-2 mr-3 text-gray-200 font-medium hover:text-blue-400"
+              >
+                Home
+              </a>
             </Link>
             <a
               href="#"
@@ -85,12 +85,12 @@ function Nav() {
             <div className="absolute top-full left-0 flex flex-col w-full pb-8 lg:hidden">
               <div className="pt-4 flex-1 flex flex-col items-center text-xl">
                 <Link to='/'>
-                <a
-                  href="#"
-                  className="no-underline px-2 my-2 text-gray-200 font-medium hover:text-blue-400"
-                >
-                  Home
-                </a>
+                  <a
+                    href="#"
+                    className="no-underline px-2 my-2 text-gray-200 font-medium hover:text-blue-400"
+                  >
+                    Home
+                  </a>
                 </Link>
                 <a
                   href="#"
@@ -123,10 +123,10 @@ function Nav() {
                 </a>
 
                 <div className="my-2 flex justify-center">
-                
-                
+
+
                 </div>
-                
+
               </div>
             </div>
           )}
@@ -137,18 +137,18 @@ function Nav() {
         <div className="headerBG flex items-center h-20 px-6 justify-between border-b border-gray-300 text-white relative z-50">
           <div className="h-8">
             <img
-              src= {Logo }
+              src={Logo}
               className="h-full"
             />
           </div>
           <div className="flex-1 ml-10 items-center hidden lg:flex">
-            <Link to = "/">
-            <a
-              href="#"
-              className="header no-underline px-2 mr-3 text-gray-200 font-medium hover:text-blue-400"
-            >
-              Home
-            </a>
+            <Link to="/">
+              <a
+                href="#"
+                className="header no-underline px-2 mr-3 text-gray-200 font-medium hover:text-blue-400"
+              >
+                Home
+              </a>
             </Link>
             <a
               href="#"
@@ -189,13 +189,13 @@ function Nav() {
           {mobileOpen && (
             <div className="bg-blue-800 absolute top-full left-0 flex flex-col w-full pb-8 lg:hidden">
               <div className="pt-4 flex-1 flex flex-col items-center text-xl">
-                <Link to= '/'>
-                <a
-                  href="#"
-                  className="no-underline px-2 my-2 text-gray-200 font-medium hover:text-blue-400"
-                >
-                  Home
-                </a>
+                <Link to='/'>
+                  <a
+                    href="#"
+                    className="no-underline px-2 my-2 text-gray-200 font-medium hover:text-blue-400"
+                  >
+                    Home
+                  </a>
                 </Link>
                 <a
                   href="#"
@@ -215,18 +215,18 @@ function Nav() {
                 >
                   Settings
                 </a> */}
-              <div className="pb-2" >
-                <Link to="/login">
-                  <button text="" size="sm">
-                    Sign In
-                  </button>
-                </Link>
-                <Link to="/signup">
-                  <button size="sm">
-                    Sign Up
-                  </button>
-                </Link>
-              </div>
+                <div className="pb-2" >
+                  <Link to="/login">
+                    <button text="" size="sm">
+                      Sign In
+                    </button>
+                  </Link>
+                  <Link to="/signup">
+                    <button size="sm">
+                      Sign Up
+                    </button>
+                  </Link>
+                </div>
               </div>
             </div>
           )}
