@@ -1,3 +1,4 @@
+import React from 'react';
 import Pages from './pages/Pages'
 import Category from "./components/Category";
 import { BrowserRouter } from 'react-router-dom'
@@ -5,11 +6,14 @@ import Search from './components/Search'
 import styled from "styled-components"
 import { Link } from "react-router-dom"
 import { GiKnifeFork } from "react-icons/gi";
+import Navbar from './components/Nav/index';
 
 function App() {
   return (
+
     <div className="App">
       <BrowserRouter>
+        <Navbar/>
       <Nav>
         <GiKnifeFork />
         <Logo to={"/"}>LeCookBook</Logo>
@@ -18,7 +22,9 @@ function App() {
         <Category />
         <Pages />
       </BrowserRouter>
+    
     </div>
+    
   );
 }
 
