@@ -19,7 +19,7 @@ import { StoreProvider } from './utils/GlobalState';
 import Success from './pages/Success';
 import RandomRecipe from './pages/RandomRecipe';
 import Form from './components/FoodFrom/index';
-import Results from './pages/results';
+import Results from './pages/Results';
 import CookBook from './pages/CookBook';
 import Footer from './components/Footer/Footer'
 
