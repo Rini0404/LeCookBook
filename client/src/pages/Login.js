@@ -5,7 +5,7 @@ import { LOGIN } from '../utils/mutations';
 import Auth from '../utils/auth';
 import test from '../grd.jpg';
 
-function Login(props) {
+function Login() {
   const [formState, setFormState] = useState({ email: '', password: '' });
   const [login, { error }] = useMutation(LOGIN);
 
@@ -15,7 +15,9 @@ function Login(props) {
       const mutationResponse = await login({
         variables: { email: formState.email, password: formState.password },
       });
+      console.log(mutationResponse);
       const token = mutationResponse.data.login.token;
+      console.log(token);
       Auth.login(token);
     } catch (e) {
       console.log(e);
