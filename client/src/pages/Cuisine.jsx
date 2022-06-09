@@ -2,6 +2,9 @@ import React, {useEffect, useState} from 'react';
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
 import { Link, useParams } from 'react-router-dom';
+import Search from '../components/Search'
+import Category from '../components/Category'
+
 
 function Cuisine() {
 
@@ -21,7 +24,10 @@ function Cuisine() {
     }, [params.type]);
 
     return (
-        <Grid animate={{opacity:1}}
+        <div>
+        <Search />
+        <Category />
+        <Grid className='pt-16' animate={{opacity:1}}
         initial={{opacity: 0}}
         exit= {{ opacity: 0 }}
         transition={{ duration: 0.5}}>
@@ -37,6 +43,7 @@ function Cuisine() {
             })}
             
         </Grid>
+        </div>
     )
 }
 

@@ -2,6 +2,9 @@ import React, {useEffect, useState} from 'react';
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
+import Search from '../components/Search'
+import Category from '../components/Category'
+
 
 function Results() {
 
@@ -21,6 +24,9 @@ function Results() {
   }, [URL]);
 
   return (
+    <div>
+    <Search />
+    <Category />
       <Grid animate={{opacity:1}}
       initial={{opacity: 0}}
       exit= {{ opacity: 0 }}
@@ -37,6 +43,7 @@ function Results() {
           })}
           
       </Grid>
+      </div>
   )
 }
 

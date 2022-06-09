@@ -2,6 +2,9 @@ import { useEffect, useState } from "react";
 import styled from "styled-components";
 import { useParams } from "react-router-dom";
 import { motion } from 'framer-motion';
+import Search from '../components/Search'
+import Category from '../components/Category'
+
 
 function Recipe() {
   let params = useParams();
@@ -18,6 +21,9 @@ function Recipe() {
   }, [params.name])
 
   return (
+    <div>
+    <Search />
+    <Category />
     <DetailWrapper 
     animate={{opacity:1}}
     initial={{opacity: 0}}
@@ -47,6 +53,7 @@ function Recipe() {
         )}
       </Info>
     </DetailWrapper>
+    </div>
   )
 }
 
