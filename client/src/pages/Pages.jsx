@@ -7,8 +7,9 @@ import Recipe from "./Recipe"
 import {AnimatePresence} from 'framer-motion'
 import Login from './Login';
 import Signup from './Signup';
-
-
+import Form from '../components/FoodFrom/Form';
+import Results from './results'
+import Random from './Random'
 
 function Pages() {
   const location = useLocation();
@@ -22,6 +23,9 @@ function Pages() {
         <Route path="/recipe/:name" element={<Recipe />} />
         <Route path = '/Login' element={<Login />} />
         <Route path= '/Signup' element={<Signup />} />
+        <Route path = '/Form' element={<Form />} />
+        <Route path="/Results" element={<Results />} />
+        <Route path="/Random" element={<Random />} />
     </Routes>
     
    

@@ -1,5 +1,3 @@
-import { useEffect } from "react";
-import { Link } from "react-router-dom";
 
 const apiQuery = async () => {
   // This is the base URL we will use to make our API call.
