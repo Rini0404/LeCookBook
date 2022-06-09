@@ -5,6 +5,7 @@ import Searched from './Searched'
 import { Route, Routes, useLocation } from 'react-router-dom'
 import Recipe from "./Recipe"
 import {AnimatePresence} from 'framer-motion'
+import Login from './Login'
 
 function Pages() {
   const location = useLocation();
@@ -15,9 +16,18 @@ function Pages() {
         <Route path="/cuisine/:type" element={<Cuisine />} />
         <Route path="/searched/:search" element={<Searched />} />
         <Route path="/recipe/:name" element={<Recipe />} />
+        <Route path = '/Login' element={<Login />} />
+        
     </Routes>
     </AnimatePresence>
   );
 }
 
 export default Pages;
+
+// import Results from './results';
+// import CookBook from './CookBook';
+
+// <Route path="/Form" element={<Form />} /> 
+// <Route path="/results" element={<Results />} />
+// <Route path="/CookBook" element={<CookBook />} />

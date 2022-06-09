@@ -6,14 +6,11 @@ import Logo from "../../logo.png";
 import React, { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
-  faQuestionCircle,
   faBell,
   faBars,
   faTimes,
 } from "@fortawesome/free-solid-svg-icons";
 
-// import avatar from "../components/avatar"
-// import button from "../components/button"
 
 function Nav() {
   const Test = () => {
