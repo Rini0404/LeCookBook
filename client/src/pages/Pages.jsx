@@ -4,7 +4,7 @@ import Cuisine from "./Cuisine"
 import Searched from './Searched'
 import { Route, Routes, useLocation } from 'react-router-dom'
 import Recipe from "./Recipe"
-import {AnimatePresence} from 'framer-motion'
+// import {AnimatePresence} from 'framer-motion'
 
 function Pages() {
   const location = useLocation();

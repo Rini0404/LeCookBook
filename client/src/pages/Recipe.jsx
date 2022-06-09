@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import styled from "styled-components";
 import { useParams } from "react-router-dom";
-import { motion } from 'framer-motion';
+// import { motion } from 'framer-motion';
 
 function Recipe() {
   let params = useParams();

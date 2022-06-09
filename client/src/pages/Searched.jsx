@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react"
 import { Link, useParams } from 'react-router-dom';
 import styled from 'styled-components';
-import { motion } from 'framer-motion';
+// import { motion } from 'framer-motion';
 
 
 function Searched() {
