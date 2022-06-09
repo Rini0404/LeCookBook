@@ -2,6 +2,8 @@ import { useEffect, useState } from "react"
 import { Link, useParams } from 'react-router-dom';
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
+import Search from '../components/Search'
+import Category from '../components/Category'
 
 
 function Searched() {
@@ -18,6 +20,9 @@ function Searched() {
     }, [params.search])
 
     return (
+        <div>
+        <Search />
+        <Category />
         <Grid animate={{opacity:1}}
         initial={{opacity: 0}}
         exit= {{ opacity: 0 }}
@@ -33,6 +38,7 @@ function Searched() {
                 );
             })}
         </Grid>
+        </div>
     );
 }
 

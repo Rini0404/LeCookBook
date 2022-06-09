@@ -54,8 +54,6 @@ function App() {
         <GiKnifeFork />
         <Logo to={"/"}>LeCookBook</Logo>
       </Nav>
-        <Search />
-        <Category />
         <Pages />
       </StoreProvider>
       </BrowserRouter>

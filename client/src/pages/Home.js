@@ -1,9 +1,14 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import Logo from "../logo.png";
+import Search from '../components/Search'
+import Category from '../components/Category'
 
 const Home = () => {
   return (
+    <div>
+    <Search />
+    <Category />
     <section className="dark:bg-coolGray-800 dark:text-coolGray-100">
       <div className="container flex flex-col justify-center p-6 mx-auto sm:py-12 lg:py-24 lg:flex-row lg:justify-between">
         <div className="flex items-center justify-center p-6 mt-8 lg:mt-0 h-72 sm:h-80 lg:h-96 xl:h-112 2xl:h-128">
@@ -47,6 +52,7 @@ const Home = () => {
         </div>
       </div>
     </section>
+    </div>
   );
 };
 
