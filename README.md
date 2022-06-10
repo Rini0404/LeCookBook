@@ -1,50 +1,67 @@
-# Add Comments to Implementation of the MERN-stack Architecture
+<h1 align="center">Welcome to LeCookBook 👋</h1>
+<p>
+  <img alt="Version" src="https://img.shields.io/badge/version-v1.0.0-blue.svg?cacheSeconds=2592000" />
+  <img src="https://img.shields.io/badge/npm-%3E%3D5.5.0-blue.svg" />
+  <img src="https://img.shields.io/badge/node-%3E%3D9.3.0-blue.svg" />
+  <a href="https://github.com/Rini0404/LeCookBook" target="_blank">
+    <img alt="Documentation" src="https://img.shields.io/badge/documentation-yes-brightgreen.svg" />
+  </a>
+  <a href="https://github.com/kefranabg/readme-md-generator/graphs/commit-activity" target="_blank">
+    <img alt="Maintenance" src="https://img.shields.io/badge/Maintained%3F-yes-green.svg" />
+  </a>
+  <a href="https://github.com/kefranabg/readme-md-generator/blob/master/LICENSE" target="_blank">
+    <img alt="License: MIT" src="https://img.shields.io/github/license/add soon/LeCookBook" />
+  </a>
+</p>
 
-## Root-level Functionality
+> A sweet MERN Stack project, that lets you view, quicksearch, search by category and a randomizer with a cool UI. This page has a beautiful polished UI Expercience. We also encourage you to sign up, or log back in. We use JWTS, so don't try to worry a lot about your security. This app was made possible because the Spoontacular API
 
-* The `npm start` script: In production, we only run the back-end server, which will serve the built React application code as its front end.
-    
-* The `npm run develop` script: In development, we need to run both a back-end server and the React development server, so we use the `concurrently` library to execute two separate promises at the same time.
+### 🏠 [Homepage](https://github.com/Rini0404/LeCookBook)
 
-* The `npm install` script: Since our dependencies for the entire application exist in two smaller applications, we use this script to automatically install all of them at once.
+### ✨ [Demo](n/a)
 
-* The `npm run seed` script: We can seed our database with data when we run this command.
+## Prerequisites
 
-* The `npm run build` script: When we deploy our application, we instruct the hosting service to execute the `build` command and build our production-ready React application."
+- npm >=5.5.0
+- node >=9.3.0
 
+## Install
 
-```json
-"scripts": {
-  "start": "node server/server.js",
-  "develop": "concurrently \"cd server && npm run watch\" \"cd client && npm start\"",
-  "install": "cd server && npm i && cd ../client && npm i",
-  "seed": "cd server && npm run seed",
-  "build": "cd client && npm run build"
-},
+```sh
+npm i 
 ```
 
-## Client-side Functionality
+## Usage
 
-* Since we run a front-end and back-end server for our full-stack application in development, we set it up so all client-side requests to our API server are prefixed with the API server's URL.
-
-```json
-"proxy": "http://localhost:3001",
+```sh
+npm run develop 
 ```
 
-## Server-side Functionality
+## Run tests
 
-* In production, when we no longer need to use the Create React App development server, we set up our server to serve the built React front-end application that is in the `../client/build` directory.
-
-```js
-if (process.env.NODE_ENV === 'production') {
-  app.use(express.static(path.join(__dirname, '../client/build')));
-}
+```sh
+npm run test 
 ```
 
-* Since the React front-end application will handle its own routing, we set up a wildcard route on our server that will serve the front end whenever a request for a non-API route is received.
+## Author
 
-```js
-app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, '../client/build/index.html'));
-});
-```
+👤 **Rene Ortega, Ricky Thakar, Tim McMullen, Jorge Gonzalez**
+
+* Website: reneortega.dev
+* GitHub: [@add soon](https://github.com/add soon)
+
+## 🤝 Contributing
+
+Contributions, issues and feature requests are welcome!<br />Feel free to check [issues page](https://github.com/kefranabg/readme-md-generator/issues). You can also take a look at the [contributing guide](https://github.com/kefranabg/readme-md-generator/blob/master/CONTRIBUTING.md).
+
+## Show your support
+
+Give a ⭐️ if this project helped you!
+
+## 📝 License
+
+Copyright © 2022 [Rene Ortega, Ricky Thakar, Tim McMullen, Jorge Gonzalez](https://github.com/add soon).<br />
+This project is [MIT](https://github.com/kefranabg/readme-md-generator/blob/master/LICENSE) licensed.
+
+***
+_This README was generated with ❤️ by [readme-md-generator](https://github.com/kefranabg/readme-md-generator)_
