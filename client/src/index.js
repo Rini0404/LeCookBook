@@ -6,9 +6,9 @@ import * as serviceWorker from './serviceWorker';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <React.StrictMode>
+  <React>
     <App />
-  </React.StrictMode>,
+  </React>,
     // document.getElementById('root')
 );
 
