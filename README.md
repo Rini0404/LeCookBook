@@ -17,6 +17,10 @@
 > A sweet MERN Stack project, that lets you view, quicksearch, search by category and a randomizer with a cool UI. This page has a beautiful polished UI Expercience. We also encourage you to sign up, or log back in. We use JWTS, so don't try to worry a lot about your security. This app was made possible because the Spoontacular API
 
 ### 🏠 [Homepage](https://github.com/Rini0404/LeCookBook)
+<img width="1919" alt="image (3)" src="https://user-images.githubusercontent.com/95727555/173086506-cf0b12cc-7f25-4899-837f-686bfc07ebf2.png">
+<img width="1917" alt="image (2)" src="https://user-images.githubusercontent.com/95727555/173086529-023d730c-b43a-4a09-8142-965bb922df3c.png">
+<img width="1919" alt="image (1)" src="https://user-images.githubusercontent.com/95727555/173086550-19c7870f-bc9b-4af3-bbb7-37ad4c7b852b.png">
+<img width="1918" alt="image" src="https://user-images.githubusercontent.com/95727555/173086563-9ce9cc4e-eff9-42b1-a764-26b7c5d4b10f.png">
 
 ### ✨ [Demo](n/a)
 
@@ -47,8 +51,8 @@ npm run test
 
 👤 **Rene Ortega, Ricky Thakar, Tim McMullen, Jorge Gonzalez**
 
-* Website: reneortega.dev
-* GitHub: [@add soon](https://github.com/add soon)
+* Website: https://github.com/Rini0404/LeCookBook
+* GitHub: https://github.com/Rini0404/LeCookBook
 
 ## 🤝 Contributing
 
@@ -63,5 +67,3 @@ Give a ⭐️ if this project helped you!
 Copyright © 2022 [Rene Ortega, Ricky Thakar, Tim McMullen, Jorge Gonzalez](https://github.com/add soon).<br />
 This project is [MIT](https://github.com/kefranabg/readme-md-generator/blob/master/LICENSE) licensed.
 
-***
-_This README was generated with ❤️ by [readme-md-generator](https://github.com/kefranabg/readme-md-generator)_
