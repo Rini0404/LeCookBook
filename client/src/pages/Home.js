@@ -24,9 +24,8 @@ const Home = () => {
             <span className="mealHP">&nbsp; Meal</span>&nbsp; With Us!
           </h1>
           <p className="mt-6 mb-8 text-lg sm:mb-12">
-            Dictum aliquam porta in condimentum ac integer
-            <br className="hidden md:inline lg:hidden" /> turpis pulvinar, est
-            scelerisque ligula sem
+            Thank you for your interest in choosing us!
+            <br className="hidden md:inline lg:hidden" /> We love, to cook, especially when its a random recipe.
           </p>
           <div className="flex flex-col space-y-4 sm:items-center sm:justify-center sm:flex-row sm:space-y-0 sm:space-x-4 lg:justify-start">
 

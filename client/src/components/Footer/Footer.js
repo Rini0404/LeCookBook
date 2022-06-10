@@ -21,7 +21,7 @@ const Footer4 = () => {
             <div className="mt-6 lg:mb-0 mb-6">
 
               <a href="https://github.com/Rini0404/LeCookBook">
-                <i className="footer-icons">
+                <i className="h-48">
                   <AiFillGithub />
                 </i>
               </a>

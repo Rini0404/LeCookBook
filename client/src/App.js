@@ -8,6 +8,7 @@ import { Link } from "react-router-dom"
 import { GiKnifeFork } from "react-icons/gi";
 import Navbar from './components/Nav/index';
 import { StoreProvider } from './utils/GlobalState';
+import Footer from './components/Footer/Footer'
 
 
 import {
@@ -55,6 +56,7 @@ function App() {
         <Logo to={"/"}>LeCookBook</Logo>
       </Nav>
         <Pages />
+        <Footer />
       </StoreProvider>
       </BrowserRouter>
     
