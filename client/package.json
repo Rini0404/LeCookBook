@@ -1,7 +1,8 @@
 {
-  "name": "lecookbook",
-  "version": "1.0.0",
-  "description": "",
+  "name": "lecookbookv2",
+  "version": "0.1.0",
+  "private": true,
+  "proxy": "http://localhost:3001/",
   "main": "server/server.js",
   "scripts": {
     "start": "react-scripts start",
