@@ -2,7 +2,7 @@
 import Auth from "../../utils/auth";
 import { Link } from "react-router-dom";
 import Logo from "../../logo.png";
-
+// import AboutUs from '.'
 import React, { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -30,13 +30,14 @@ function Nav() {
                 Home
               </a>
             </Link>
+            <Link to="/AboutUs">
             <a
               href="#"
               className="no-underline px-2 mr-3 font-medium hover:text-blue-400"
             >
               About Us
             </a>
-        
+          </Link>
           </div>
           <div className="items-center hidden lg:flex">
             {/* <Link to="/CookBook">
@@ -77,12 +78,14 @@ function Nav() {
                     Home
                   </a>
                 </Link>
-                <a
-                  href="#"
-                  className="pt-4 no-underline px-2 my-2 font-medium hover:text-blue-400"
-                >
-                  About Us
-                </a>
+                <Link to="/AboutUs">
+            <a
+              href="#"
+              className="no-underline px-2 mr-3 font-medium hover:text-blue-400"
+            >
+              About Us
+            </a>
+          </Link>
                 {/* <a
                   href="#"
                   className="no-underline px-2 my-2 text-gray-200 font-medium hover:text-blue-400"
@@ -129,12 +132,14 @@ function Nav() {
                 Home
               </a>
             </Link>
+            <Link to="/AboutUs">
             <a
               href="#"
               className="no-underline px-2 mr-3 font-medium hover:text-blue-400"
             >
               About Us
             </a>
+          </Link>
             {/* <a
               href="#"
               className="no-underline px-2 mr-3 text-gray-200 font-medium hover:text-blue-400"

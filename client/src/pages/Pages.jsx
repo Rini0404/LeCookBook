@@ -8,8 +8,9 @@ import {AnimatePresence} from 'framer-motion'
 import Login from './Login';
 import Signup from './Signup';
 import Form from '../components/FoodFrom/Form';
-import Results from './results'
-import Random from './Random'
+import Results from './results';
+import Random from './Random';
+import AboutUs from './AboutUs';
 
 function Pages() {
   const location = useLocation();
@@ -26,6 +27,7 @@ function Pages() {
         <Route path = '/Form' element={<Form />} />
         <Route path="/Results" element={<Results />} />
         <Route path="/Random" element={<Random />} />
+        <Route path = "/AboutUs" element={<AboutUs />} />
     </Routes>
     
    
