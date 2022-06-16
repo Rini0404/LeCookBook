@@ -11,13 +11,7 @@ export const LOGIN = gql`
   }
 `;
 
-export const ADD_ORDER = gql`
-  mutation addOrder($apiId: String!) {
-    addOrder(_id: $apiId) {
-      apiId
-    } 
-  }
-`;
+
 
 export const ADD_USER = gql`
   mutation addUser(
